@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Conceitos</title>
+    <style>
+
+        h1{ font: normal 18pt Arial;
+            color: darkorange;
+            text-align: center;
+            background-color: rgb(253, 237, 86);
+            height: 80px;
+            width: 400px;
+            line-height: 80px;
+            
+        }
+
+        body{
+            background-color: lightgoldenrodyellow;
+            margin-left: 30%;
+           
+        }
+        p{
+            font: normal 13pt arial;   
+        }
+
+        input{
+            height: 20px;
+            width: 150px;
+
+        }
+        div{
+            font: normal 13pt arial;
+            background-color: wheat;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Calculadora de Conceitos v3.0</h1>
+    <p id="Frasetopo"><strong>Insira o nome dos alunos e as notas para calcular:</strong></p>
+    <p id="nomealuno">Nome do aluno:</p><input type="text" name="alunos" id="alunos">
+    <p id="notasaluno">Notas do aluno:</p><input type="text" name="notastxt" id="notastxt">
+    <p id="notasaluno">Média da instituição:</p><input type="text" name="mediatxt" id="mediatxt">
+    <input type="button" value="Calcular conceito" onclick="Calcular()">
+    <div id="resultado"></div>
+
+
+
+    <script>
+
+        window.document.querySelector('p#Frasetopo').style.marginTop = '30px'
+        window.document.querySelector('p#nomealuno').style.marginTop = '80px'
+        window.document.querySelector('input#alunos').style.marginTop = '10px'
+        window.document.querySelector('input#alunos').style.marginBottom = '20px'
+        window.document.querySelector('input#notastxt').style.marginTop = '10px'
+        window.document.querySelector('input#notastxt').style.marginBottom = '20px'
+
+        var nometxt = window.document.querySelector('input#alunos')
+        var notastxt = window.document.querySelector('input#notastxt')
+        var mediatxt = window.document.querySelector('input#mediatxt')
+
+        function Calcular(){
+
+        var nome = (nometxt.value)
+        var nota = Number(notastxt.value)
+        var conceito = ""
+        var media = Number(mediatxt.value)
+
+        if (nota < media){
+            conceito = "Reprovado!"
+        }
+
+        else {
+            conceito = "Aprovado!!"
+        }
+        window.document.querySelector('div#resultado').innerHTML = (`${nome}, sua nota foi <strong>${nota}</strong>, seu conceito foi: <br/><br/> <strong>${conceito}</strong>`)
+        window.document.querySelector('div#resultado').style.height = '100px'
+        window.document.querySelector('div#resultado').style.width = '300px'
+    
+    }
+        
+        
+
+    //Calculadora de conceitos finais v1.0(beta)
+
+        //Projeto de JavaScript
+        
+
+        
+        //Desenvolvido por: Nícolas Chaves, 2022: Programa desenvolvido para estudo de JavaScript.
+        </script>
+</body>
+</html>
