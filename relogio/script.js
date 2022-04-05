@@ -101,5 +101,5 @@ function getTimeNow(){
     } else{
         res.innerHTML += ('[ERRO] Hora inválida!]')
     }
+    window.setInterval('getTimeNow()', 1000)
 }
-window.setInterval('getTimeNow()', 1000)
