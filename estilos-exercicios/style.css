@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=Shadows+Into+Light&display=swap');
+
+:root{
+    --fonteSans: 'Noto Sans', sans-serif;
+    --fontecursive:'Shadows Into Light', cursive;
+    --cor0: #012E40;
+    --cor1: #025159;
+    --cor2: #038C8C;
+    --cor3: #03A696;
+    --cor4: #F28705;
+
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: var(--fonteSans);
+    background-color: var(--cor3);
+}
+section{
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px 3px rgba(0, 0, 0, 0.201);
+    height: 400px;
+}
+h1{
+    background-image: linear-gradient(to bottom, var(--cor2), transparent 90%);
+    padding-bottom: 20px;
+    color: var(--cor0);
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.433);
+    text-align: center;
+}
+h2{
+    background-image: linear-gradient(to bottom, #f270059c, #0d9a8c20);
+    padding: 8px 8px 20px 8px;
+    margin-bottom: 20px;
+    border-radius: 10px 10px 0px 0px;
+    margin-top: -10px;
+    margin-right: -10px;
+    margin-left: -10px;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.123);
+}
+.button{
+    width: 15%;
+    height: 8%;
+    background-color: var(--cor4);
+    border-radius: 10px;
+    color: white;
+    text-shadow: 0px 0px 1px black;
+    font-family: var(--fonteSans);
+}
+.button:hover{
+    background-color: #2bf0f068;
+    width: 16%;
+    height: 9%;
+    font-size: 1.02em;
+    color: rgba(0, 0, 0, 0.876);
+    text-shadow: none;
+    transition-duration: 0.5s;
+}
