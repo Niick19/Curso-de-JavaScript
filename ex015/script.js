@@ -14,11 +14,24 @@ function verificar(){
         var sexo = ''
         
         if (Selsex[0].checked){
-            sexo = 'Homem'
+            sexo = 'homem'
         }
         else {
-            sexo = 'Mulher'
+            sexo = 'mulher'
+        }
+        if (idade <= 12){
+            img.setAttribute('src',`Images/${sexo}/criança.jpg`)
+        }
+        else if (idade < 21){
+            img.setAttribute('src', `Images/${sexo}/jovem.jpg`)
+        }
+        else if (idade < 60){
+            img.setAttribute('src', `Images/${sexo}/adulto.jpg`)
+        }
+        else{
+            img.setAttribute('src', `Images/${sexo}/idoso.jpg`)
         }
         resultado.innerHTML = `Idade: ${idade} Sexo: ${sexo}`
+        resultado.appendChild(img)
     }
 }
