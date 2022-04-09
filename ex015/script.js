@@ -3,11 +3,12 @@ function verificar(){
     var AnoAtual= data.getFullYear()
     var AnoNascimento = document.getElementById('AnoNascimento')
     var resultado = document.getElementById('resultado')
-    if (AnoNascimento.value.length == 0 || AnoNascimento.value > AnoAtual){
+    var idade = AnoAtual - Number(AnoNascimento.value)
+    if (AnoNascimento.value.length == 0 || AnoNascimento.value > AnoAtual || idade > 135){
         window.alert('[ERRO] verifique os dados e tente novamente!')
     }
     else {
-        var idade = AnoAtual - Number(AnoNascimento.value)
+        
         var Selsex = document.getElementsByName('sexo')
         var img = document.createElement('img')
         img.setAttribute('id','foto')
@@ -28,10 +29,15 @@ function verificar(){
         else if (idade < 60){
             img.setAttribute('src', `Images/${sexo}/adulto.jpg`)
         }
-        else{
+        else if (idade < 100){
             img.setAttribute('src', `Images/${sexo}/idoso.jpg`)
         }
-        resultado.innerHTML = `Idade: ${idade} Sexo: ${sexo}`
+        else {
+            img.setAttribute('src', `Images/${sexo}/aged.jpg`)
+        }
+        resultado.innerHTML = `<p class='center'>Olá! Detectamos um(a) ${sexo} de ${idade} anos!</p>`
+        resultado.style.textAlign='center'
         resultado.appendChild(img)
+        
     }
 }
