@@ -9,13 +9,15 @@ function verificar(){
     else {
         var idade = AnoAtual - Number(AnoNascimento.value)
         var Selsex = document.getElementsByName('sexo')
+        var img = document.createElement('img')
+        img.setAttribute('id','foto')
         var sexo = ''
-
+        
         if (Selsex[0].checked){
-            var sexo = 'Homem'
+            sexo = 'Homem'
         }
         else {
-            var sexo = 'Mulher'
+            sexo = 'Mulher'
         }
         resultado.innerHTML = `Idade: ${idade} Sexo: ${sexo}`
     }
