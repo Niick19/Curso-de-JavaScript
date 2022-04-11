@@ -112,9 +112,12 @@ div.botaoGG{
     font-size: 0.95em;
     color: rgba(0, 0, 0, 0.876);
     text-shadow: none;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
 }
 .buttonGG:active{
-    background-color: rgb(255, 255, 255);
+    background-color: #2bf0f02f;
+    outline: solid 1px rgba(0, 0, 0, 0.282);
+    width: 136px;
+    font-size: 0.98em;
     transition-duration: 0.05s;
 }
