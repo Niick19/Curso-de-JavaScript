@@ -86,5 +86,5 @@ Alguns deles continuo aprimorando e revirando os códigos fonte para ver formas 
 
 
 
-* Esse repositório foi baseado nos exercícios que podem ser encontrados no [curso de JavaScript do Curso em Vídeo](https://www.cursoemvideo.com/curso/javascript/)
-* Recomendo também o acesso ao repositório de [JavaScript](https://github.com/gustavoguanabara/javascript)do professor [Gustavo Guanabara](https://github.com/gustavoguanabara) onde pode ser encontrados alguns dos exercícios que me baseei
+* Esse repositório foi baseado nos exercícios que podem ser encontrados no [Curso de JavaScript](https://www.cursoemvideo.com/curso/javascript/) do Curso em Vídeo
+* Recomendo também o acesso ao repositório de [JavaScript](https://github.com/gustavoguanabara/javascript) do professor [Gustavo Guanabara](https://github.com/gustavoguanabara) onde pode ser encontrados alguns dos exercícios que me baseei
