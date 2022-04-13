@@ -1,37 +1,90 @@
-## Welcome to GitHub Pages
+# Curso de JavaScript
+## Repositório de exercícios
 
-You can use the [editor on GitHub](https://github.com/nicolascoutochaves/Curso-de-JavaScript/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Repositório criado para exibir os exercícios que realizei durante o curso de JavaScript feito pela plataforma [Curso em Vídeo](https://www.cursoemvideo.com/)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Fique a vontade para fazer o que quiser com os códigos (apenas observe as condições da licença)
 
-### Markdown
+### Para mais projetos, acesse meu [GitHub](https://github.com/nicolascoutochaves)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+#### Primeiras interações e Alertas:
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+* [Exercício 1](https://nicolascoutochaves.github.io/Curso-de-JavaScript/ex001/index.html)
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
+* [Exercício 2](https://nicolascoutochaves.github.io/Curso-de-JavaScript/ex002/index.html)
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+#### Primeiras operações matemáticas:
 
-### Jekyll Themes
+* [Exercício 3](https://nicolascoutochaves.github.io/Curso-de-JavaScript/ex003/index.html)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/nicolascoutochaves/Curso-de-JavaScript/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+#### Primeiras manipulações de DOM:
 
-### Support or Contact
+* [Exercício 4](https://nicolascoutochaves.github.io/Curso-de-JavaScript/ex004/index.html)
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+
+* [Exercício 5](https://nicolascoutochaves.github.io/Curso-de-JavaScript/ex005/index.html)
+
+#### Eventos DOM:
+
+* [Exercício 6](https://nicolascoutochaves.github.io/Curso-de-JavaScript/ex006/index.html)
+
+
+* [Exercício 7](https://nicolascoutochaves.github.io/Curso-de-JavaScript/ex007/index.html)
+
+#### Começando a trabalhar com condicionais:
+
+* [Exercício 10](https://nicolascoutochaves.github.io/Curso-de-JavaScript/ex010/index.html)
+
+
+* [Exercício 10_2](https://nicolascoutochaves.github.io/Curso-de-JavaScript/ex010_2/index.html)
+
+#### Veja também o Relógio que eu fiz utilizando condicionais, switch case, etc.:
+
+* [Relógio do Sistema](https://nicolascoutochaves.github.io/Curso-de-JavaScript/relogio/index.html)
+
+#### Avançando mais nos estudos...
+
+Exercícios que aprendi a fazer mais interações com JavaScript:
+
+* [Exercício 14](https://nicolascoutochaves.github.io/Curso-de-JavaScript/ex014/index.html)
+
+
+* [Exercício 15](https://nicolascoutochaves.github.io/Curso-de-JavaScript/ex015/index.html)
+
+#### Alguns outros exercícios que resolvi me aventurar...
+
+Nos próximos exercícios, dei uma pausa nos novos conteúdos para reforçar os fundamentos e aprimorar minha lógica.
+
+Também quebrei um pouco a cabeça para corrigir os primeiros bugs que tive.
+
+Nada muito complexo, mas algum deles levou um certo tempo para achar uma solução adequada:
+
+
+* [Exercício 16](https://nicolascoutochaves.github.io/Curso-de-JavaScript/ex016/index.html)
+
+
+* [Exercício 17](https://nicolascoutochaves.github.io/Curso-de-JavaScript/ex017/index.html)
+
+
+* [Exercício 18](https://nicolascoutochaves.github.io/Curso-de-JavaScript/ex018/index.html)
+
+
+* [Exercício 19](https://nicolascoutochaves.github.io/Curso-de-JavaScript/ex019/index.html)
+
+
+
+
+### Por enquanto é isso!
+
+Estou sempre buscando rever os exercícios que ja realizei para me lembrar dos fundamentos.
+Alguns deles continuo aprimorando e revirando os códigos fonte para ver formas melhores de fazer a mesma coisa.
+
+
+
+
+* Esse repositório foi baseado nos exercícios que podem ser encontrados no [curso de JavaScript do Curso em Vídeo](https://www.cursoemvideo.com/curso/javascript/)
+* Recomendo também o acesso ao repositório de [JavaScript](https://github.com/gustavoguanabara/javascript)do professor [Gustavo Guanabara](https://github.com/gustavoguanabara) onde pode ser encontrados alguns dos exercícios que me baseei
