@@ -105,11 +105,10 @@ div#resultado{
    height: 30%;
 }
 .buttonGG{
-    position: absolute;
     width: 130px;
     display: block;
     top: 30%;
-    left: 20%;
+    left: 50%;
     border-radius: 13px;
     border-width: 0px;
     height: 40px;
