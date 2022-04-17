@@ -8,7 +8,8 @@
 </head>
 <body>
     <h1>Sistema de Imigração</h1>
-    <p>Teste se você é brasileiro</p>
+    <h2>Teste se você é brasileiro</h2>
+    <p>Insira abaixo o nome do país onde você nasceu e deixe o programa identificar se você é estrangeiro!</p>
 
     <input type="text" name="país" id="país">
     <input type="button" value="Verificar" onclick="testedna()">
@@ -18,7 +19,7 @@
         function testedna(){
            var país = document.querySelector('input#país')
            res = document.querySelector('div#res')
-           if (país.value.toLowerCase() == "brasil"){
+           if (país.value.toLowerCase() == "brasil" || país.value.toLowerCase() == 'br'){
                res.innerHTML = ('Você é brasileiro')
            }
            else {
