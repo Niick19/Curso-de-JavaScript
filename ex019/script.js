@@ -3,9 +3,9 @@ function verificar() {
     var numSorteado = (Math.random() * 100).toFixed(0)
     var resultado = document.querySelector('div#resultado')
     if (input == numSorteado){
-        alert(` DEU CERTO!!!  o input foi ${input} e o numero sorteado foi: ${numSorteado}`)
+        resultado.innerHTML= `Acertou!! O número sorteado foi: ${numSorteado}`
     }
     else {
-        alert(` o input foi ${input} e o numero sorteado foi: ${numSorteado}`)
+        resultado.innerHTML= `ERROU!! O número sorteado foi: ${numSorteado}`
     }
 }
