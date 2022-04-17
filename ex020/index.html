@@ -10,22 +10,34 @@
 <style>
     input{
         display: block;
+        margin-bottom: 20px;
     }
     p{
         text-indent: 0px;
-        margin-bottom: 30px;
+        margin-bottom: 5px;
+        margin-top: 15px;
+    }
+    strong{
+        margin: 0px;
     }
 </style>
 <body>
     <h1>Contador automático</h1>   
     <section>
         <h2>Insira os dados abaixo e clique em verificar</h2>
-        <p>Número inicial</p>
+        <p><strong>Número inicial</strong></p>
         <input type="number" name="NumInicial" id="NumInicial">
-        <p>Número final</p>
+        <p><strong>Número final</strong></p>
         <input type="number" name="NumFinal" id="NumFinal">
-        <p>Regra de progressão (insira aqui como a contagem será feita: de "1 em 1" "2 em 2" </p>
+        <p><strong>Regra de progressão</strong> <br>(insira aqui como a contagem será feita: de "1 em 1", "2 em 2") </p>
         <input type="number" name="Regra" id="Regra">
+
+        <input class="buttonGG" type="button" value="Contar" onclick="contar()">
+
+        <div id="resultado">
+
+        </div>
     </section>
+    <script src="script.js"></script>
 </body>
 </html>
