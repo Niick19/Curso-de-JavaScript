@@ -11,12 +11,16 @@
     <h1>Tabuada</h1>
     <section>
         <h2>Digite um número e clique em "Calcular" para ver sua Tabuada</h2>
+        <p>Insira, respectivamente, o número que deseja calcular e o limite da tabuada (padrão = "10")</p>
+        <br>
         <input type="number" name="numero" id="numero">
+        <input type="number" name="limite" id="limiter">
         <input class="button" type="button" value="Calcular" onclick="calcular()">
-        
-        <div id="resultado">"Inserir a tabela aqui"
+
+        <select name="tabuada" id="resultado" size="10">
+            <option>Digite o número a ser calculado.</option>
             
-        </div>
+        </select>
     </section>
     <script src="script.js"></script>
 </body>

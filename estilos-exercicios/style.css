@@ -137,3 +137,6 @@ div#resultado{
     font-size: 0.98em;
     transition-duration: 0.05s;
 }
+select{
+    margin-top: 20px;
+}
