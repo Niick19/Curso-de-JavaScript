@@ -1,5 +1,6 @@
 
 function calcular(){
+<<<<<<< Updated upstream
 
     var multiplicando = (document.getElementById('numero').value)
     var resultado = document.querySelector('div#resultado')
@@ -22,6 +23,17 @@ function calcular(){
     resultado.innerHTML += `${multiplicando}x${count} = ${produto} <br>`
     }
 } */
+=======
+    var multiplicando = Number(document.getElementById('numero').value)
+    var multiplicador = 0
+    var resultado = document.querySelector('div#resultado')
+    var produto = multiplicando * multiplicador
+    resultado.innerHTML = ""
+    do {
+        resultado.innerHTML += `${multiplicando} x ${multiplicador} = ${produto} <br>`
+        multiplicador++
+    } while (multiplicador <= 10)
+>>>>>>> Stashed changes
 
     if (multiplicando.length == 0){
     alert("Verifique os dados e tente novamente!")
