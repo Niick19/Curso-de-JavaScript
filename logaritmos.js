@@ -1,7 +1,8 @@
 //Calculadora de logaritmos
 
 let primos = []
-let numerommc = 100
+let numerommc = 500
+var multiploscomuns = []
 function numerosprimos(n){
 
     if (n <= 0 || n === NaN || n === undefined){
@@ -33,13 +34,24 @@ function listarprimos() {
         primos.push(c)
     } 
 }
-    console.log(primos)
+    /* console.log(primos) */
 }
+
 listarprimos()
 
+function isDivisible (){
+    for (let pos in primos){
+        /* console.log(pos, primos[pos]) */
+        if (numerommc % primos[pos] == 0){
 
+            multiploscomuns.push(primos[pos])
+            console.log(`O número ${numerommc} é divisível por ${primos[pos]}`)
+            console.log(`${numerommc} / ${primos[pos]} = ${numerommc / primos[pos]}`)
+            
+        }
+    
+    }
+    console.log(multiploscomuns)
+}
 
-
-
-/* function logaritmos(a=10, b, x){
-} */
+isDivisible()
