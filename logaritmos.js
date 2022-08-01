@@ -1,26 +1,42 @@
 //Calculadora de logaritmos
 
-
-var resto = []
-
+let primos = []
+let numerommc = 100
 function numerosprimos(n){
-    if (n <= 0 || n == NaN || n == undefined){
+
+    if (n <= 0 || n === NaN || n === undefined){
         return "Número inválido!"
     }
-    else if(n == 2){
-        return "É primo!"
+    else if(n === 2){
+        /* console.log("É primo!") */
+        return true
+        
     }
     else {
-        for(var divisor = 2; divisor < n; divisor++){
-        resto.push(n % divisor)
-    }
-    if(resto.indexOf(0) != -1){
-        return "NÃO É primo!"
-    } else{
-        return "É primo!"
-    }
+        for(let divisor = 2; divisor < n; divisor++){
+    
+            if(n % divisor == 0 ){
+            /* console.log("Não é primo!") */
+            return false
+            
+            } else{
+            /* console.log("É primo!") */
+                return true
+            }
+}
 }   
 }
+
+function listarprimos() {
+    for (let c = 2; c < numerommc; c++){
+     if (numerosprimos(c) == true){
+        primos.push(c)
+    } 
+}
+    console.log(primos)
+}
+listarprimos()
+
 
 
 
