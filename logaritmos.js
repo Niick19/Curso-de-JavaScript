@@ -1,7 +1,7 @@
 //Calculadora de logaritmos
 
 let primos = []
-let numerommc = 500
+let numerommc = 100
 var multiploscomuns = []
 function numerosprimos(n){
 
@@ -34,7 +34,7 @@ function listarprimos() {
         primos.push(c)
     } 
 }
-    /* console.log(primos) */
+     /* console.log(primos) //Listar todos os primos */
 }
 
 listarprimos()
