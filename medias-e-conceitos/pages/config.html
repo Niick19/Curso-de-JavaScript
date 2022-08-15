@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="shortcut icon" href="../media/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Configurar()</h1>
+    </header>
+    <main>
+        
+            <label for="numTurma">Numero da turma:</label> 
+        <input type="number" name="numeroDaTurma" id="numTurma"> 
+            <input type="button" value="Selecionar" onclick="selectClassgroup()"> <br>
+            
+                <label for="inserirAluno">Inserir alunos:</label>
+        <input type="text" name="insertAluno" id="inserirAluno">
+
+        <h2>Conceitos</h2> 
+
+            <label for="mediaDeAprovacao">Média para aprovação:</label>
+        <input type="number" name="mediaPadrao" id="mediaDeAprovacao">
+
+        
+        <p>Insira abaixo o nome e a faixa do conceito:</p>
+            <label for="nomeDoConceito">Conceito </label>
+        <input type="text" id="nomeDoConceito">
+        
+            <label for="valorConceito">>= (maior ou igual a)</label>
+        <input type="number" name="valueConcept" id="valorConceito">
+        <input type="button" value="Inserir">
+        <br><select size="10" name="conceitosPadrao" id="tabelaConceitos"></select>
+
+        <p><a href="./index.html">Concluir</a></p>
+    </main>
+    <script src="../config.js"></script>
+</body>
+</html>

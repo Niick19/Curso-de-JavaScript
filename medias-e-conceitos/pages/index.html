@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceitos Finais</title>
+    <link rel="shortcut icon" href="../media/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora de conceitos</h1>
+        <p><a href="./config.html">Ir para as configurações</a></p>
+    </header>
+    <main>
+        <h2 id="numTurma">Turma 301</h2>
+        <h3>Nomes dos Alunos:</h3>
+        <select size="13" name="listaAlunos" id="nomeAlunos"></select>
+
+        <section id="insertArea">
+            <p>Insira a Nota:</p>
+
+                <input type="number" name="notaAtual" id="inserirNota">
+
+
+            <input type="radio" name="typeSelector" id="selectProva" checked>
+                <label for="selectProva">Prova</label>
+                
+            <input type="radio" name="typeSelector" id="selectRP">
+                <label for="selectRP">Recuperação</label>
+                <br>
+            
+            <input type="radio" name="typeSelector" id="selectTrabalho">
+                <label for="selectTrabalho">Trabalho</label>
+            
+            <input type="radio" name="typeSelector" id="selectOutros">
+                <label for="selectOutros">Outros</label> <br>
+
+            <input type="button" value="Inserir">
+        </section>
+
+        <select size="13" name="areaDeNotas" id="listaNotasAluno">
+
+        </select> <br>
+
+        <input type="button" value="Calcular conceito">
+            <div id="result">
+
+            </div>
+    </main>
+
+
+
+
+    <script type="Module" src="../script.js"></script>
+</body>
+</html>
