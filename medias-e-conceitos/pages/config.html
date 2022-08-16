@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="shortcut icon" href="../media/favicon.png" type="image/x-icon">
 </head>
-<body>
+<body onload="activateKeyboardListener()">
     <header>
         <h1>Configurar()</h1>
     </header>
@@ -19,7 +19,7 @@
             <input type="button" value="Selecionar" onclick="selectClassgroup()"> <br>
             
                 <label for="inserirAluno">Inserir alunos:</label>
-        <input type="text" name="insertAluno" id="inserirAluno" onfocus=activateKeyboardListener()>
+        <input type="text" name="insertAluno" id="inserirAluno">
                 <input type="button" value="Inserir" onclick="inserirAluno()">
 
         <h2>Conceitos</h2> 

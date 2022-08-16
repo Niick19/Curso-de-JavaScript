@@ -11,15 +11,23 @@ function selectClassgroup() {
     console.log(Turma)
 }
 function activateKeyboardListener() {
-    //console.log('now listening the keyboard!')
+    console.log('now listening the keyboard!')
     window.addEventListener('keyup', event => {
         //console.log(event.code, event.key) //Logar teclas que estão sendo digitadas
-        
+        let isFocus
+        inputInsertAluno.addEventListener('focus', function(){isFocus = true})
+        inputInsertAluno.addEventListener('blur', function(){isFocus = false})
         if (event.code === 'Enter' || event.code === 'NumpadEnter'){
+            if(isFocus){
             inserirAluno()
+            console.log('focou!')
+        } else{
+            console.log('não focou')
         }
-})
+        }
+    })  
 }
+
 function inserirAluno(){
     const alunoAtual = inputInsertAluno.value
     function isOnList(l){
@@ -31,6 +39,13 @@ function inserirAluno(){
     }
     if (isOnList(alunoAtual)){
         console.log('Aluno ja esta na Lista!')
+        inputInsertAluno.value = ''
+        inputInsertAluno.focus()
+    } else if(inputInsertAluno.value.length <= 1){
+        window.alert('Por favor, digite um nome válido com 2 ou mais caracteres')
+        inputInsertAluno.blur()
+        inputInsertAluno.value = ''
+        console.log(alunoAtual.length)
     }
     else{
         Turma.alunosturma.push(alunoAtual)
