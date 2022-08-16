@@ -14,12 +14,13 @@
     </header>
     <main>
         
-            <label for="numTurma">Numero da turma:</label> 
-        <input type="number" name="numeroDaTurma" id="numTurma"> 
+            <label for="numTurma">Nome da turma:</label> 
+        <input type="text" name="idDaTurma" id="idTurma"> 
             <input type="button" value="Selecionar" onclick="selectClassgroup()"> <br>
             
                 <label for="inserirAluno">Inserir alunos:</label>
-        <input type="text" name="insertAluno" id="inserirAluno">
+        <input type="text" name="insertAluno" id="inserirAluno" onfocus=activateKeyboardListener()>
+                <input type="button" value="Inserir" onclick="inserirAluno()">
 
         <h2>Conceitos</h2> 
 
