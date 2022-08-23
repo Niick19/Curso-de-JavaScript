@@ -37,9 +37,7 @@ function hasLength(input){
     }
 }
 
-
-
- function inserirAluno(){
+function inserirAluno(){
     const alunoAtual = inputInsertAluno.value
 
     if (isOnList(Turma.alunosturma, alunoAtual)){
@@ -58,11 +56,12 @@ function hasLength(input){
         inputInsertAluno.focus()
     }
     }
+
     
-     function inserirTurma() {
-        const turmaAtual = (inputTurma.value)
-        Turma.nometurma = turmaAtual
-        inputTurma.value = ''
-        inputInsertAluno.focus()
-        console.log(Turma)
-    } 
+function inserirTurma() {
+    const turmaAtual = (inputTurma.value)
+    Turma.nometurma = turmaAtual
+    inputTurma.value = ''
+    inputInsertAluno.focus()
+    console.log(Turma)
+} 
