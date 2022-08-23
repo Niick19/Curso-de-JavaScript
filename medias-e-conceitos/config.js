@@ -10,21 +10,17 @@ function selectClassgroup() {
     Turma.nometurma = turmaAtual
     console.log(Turma)
 }
-function activateKeyboardListener() {
+function insertIntoInputs() {
     console.log('now listening the keyboard!')
     window.addEventListener('keyup', event => {
-        //console.log(event.code, event.key) //Logar teclas que estão sendo digitadas
-        let isFocus
-        inputInsertAluno.addEventListener('focus', function(){isFocus = true})
-        inputInsertAluno.addEventListener('blur', function(){isFocus = false})
-        if (event.code === 'Enter' || event.code === 'NumpadEnter'){
-            if(isFocus){
-            inserirAluno()
-            console.log('focou!')
-        } else{
-            console.log('não focou')
-        }
-        }
+        console.log(event.code, event.key) //Logar teclas que estão sendo digitadas
+        
+            if (event.code === 'Enter' || event.code === 'NumpadEnter'){
+                if (inputInsertAluno.matches(':focus')){
+                    inserirAluno()
+                }
+            }
+        
     })  
 }
 
