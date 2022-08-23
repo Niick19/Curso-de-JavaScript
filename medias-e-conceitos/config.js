@@ -59,10 +59,10 @@ function hasLength(input){
     }
     }
     
-   /*  function inserirTurma() {
+     function inserirTurma() {
         const turmaAtual = (inputTurma.value)
         Turma.nometurma = turmaAtual
         inputTurma.value = ''
         inputInsertAluno.focus()
         console.log(Turma)
-    } */
+    } 
