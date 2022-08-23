@@ -5,40 +5,48 @@ const Turma = {
 const inputTurma = document.getElementById('idTurma')
 const inputInsertAluno = document.getElementById('inserirAluno')
 const inputMediaPadrao = document.getElementById('mediaDeAprovacao')
-function selectClassgroup() {
-    const turmaAtual = (inputTurma.value)
-    Turma.nometurma = turmaAtual
-    console.log(Turma)
-}
-function insertIntoInputs() {
+
+ function insertIntoInputs() {
     console.log('now listening the keyboard!')
     window.addEventListener('keyup', event => {
-        console.log(event.code, event.key) //Logar teclas que estão sendo digitadas
+        //console.log(event.code, event.key) //Logar teclas que estão sendo digitadas
         
-            if (event.code === 'Enter' || event.code === 'NumpadEnter'){
+        if (event.code === 'Enter' || event.code === 'NumpadEnter'){
                 if (inputInsertAluno.matches(':focus')){
                     inserirAluno()
                 }
+                if (inputTurma.matches(':focus')){
+                    inserirTurma()
+                }
             }
-        
-    })  
+            
+        })  
+    }
+    
+function isOnList(object, value){
+    if (object.indexOf(value) != -1){
+        return true
+    } else{
+        return false
+    }
+}
+function hasLength(input){
+    if(input.length <= 1){
+        window.alert('Por favor, digite um valor com 2 ou mais caracteres')
+        return true
+    }
 }
 
-function inserirAluno(){
+
+
+ function inserirAluno(){
     const alunoAtual = inputInsertAluno.value
-    function isOnList(l){
-        if(Turma.alunosturma.indexOf(l) != -1){
-            return true
-        } else{
-            return false
-        }
-    }
-    if (isOnList(alunoAtual)){
+
+    if (isOnList(Turma.alunosturma, alunoAtual)){
         console.log('Aluno ja esta na Lista!')
         inputInsertAluno.value = ''
         inputInsertAluno.focus()
-    } else if(inputInsertAluno.value.length <= 1){
-        window.alert('Por favor, digite um nome válido com 2 ou mais caracteres')
+    } else if(hasLength(inputInsertAluno.value)){
         inputInsertAluno.blur()
         inputInsertAluno.value = ''
         console.log(alunoAtual.length)
@@ -51,4 +59,10 @@ function inserirAluno(){
     }
     }
     
-    
+   /*  function inserirTurma() {
+        const turmaAtual = (inputTurma.value)
+        Turma.nometurma = turmaAtual
+        inputTurma.value = ''
+        inputInsertAluno.focus()
+        console.log(Turma)
+    } */
