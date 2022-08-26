@@ -24,12 +24,13 @@ const inputMediaPadrao = document.getElementById('mediaDeAprovacao')
     }
     
 function isOnList(object, value){
-    if (object.indexOf(value) != -1){
+    if (object.indexOf(firstUpperCase(value)) != -1){
         return true
     } else{
         return false
     }
 }
+
 function hasLength(input){
     if(input.length <= 1){
         window.alert('Por favor, digite um valor com 2 ou mais caracteres')
@@ -37,9 +38,21 @@ function hasLength(input){
     }
 }
 
+function firstUpperCase(input){
+    return (input[0].toUpperCase() + (input.slice(1).toLowerCase()))
+}
+
+function isANumber(input){
+    if (isNaN(input)){
+        return false
+    } else{
+        return true
+    }
+}
+
 function inserirAluno(){
     const alunoAtual = inputInsertAluno.value
-
+    
     if (isOnList(Turma.alunosturma, alunoAtual)){
         console.log('Aluno ja esta na Lista!')
         inputInsertAluno.value = ''
@@ -48,9 +61,13 @@ function inserirAluno(){
         inputInsertAluno.blur()
         inputInsertAluno.value = ''
         console.log(alunoAtual.length)
+    } else if (isANumber(inputInsertAluno.value)){
+        alert('Por favor, insira um nome válido')
+        inputInsertAluno.value = ''
+        inputInsertAluno.focus()
     }
     else{
-        Turma.alunosturma.push(alunoAtual)
+        Turma.alunosturma.push(firstUpperCase(alunoAtual))
         console.log(Turma.alunosturma)
         inputInsertAluno.value = ''
         inputInsertAluno.focus()
