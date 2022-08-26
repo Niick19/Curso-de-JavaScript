@@ -82,3 +82,4 @@ function inserirTurma() {
     inputInsertAluno.focus()
     console.log(Turma)
 } 
+//test(26/08/2022)
