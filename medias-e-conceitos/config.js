@@ -1,3 +1,4 @@
+import { firstUpperCase, hasLength, isANumber, isOnList } from "./module.js";
 const Turma = {
     nometurma:301,
     alunosturma:[]
@@ -5,8 +6,9 @@ const Turma = {
 const inputTurma = document.getElementById('idTurma')
 const inputInsertAluno = document.getElementById('inserirAluno')
 const inputMediaPadrao = document.getElementById('mediaDeAprovacao')
+window.onload = insertIntoInputs()
 
- function insertIntoInputs() {
+function insertIntoInputs() {
     console.log('now listening the keyboard!')
     window.addEventListener('keyup', event => {
         //console.log(event.code, event.key) //Logar teclas que estão sendo digitadas
@@ -21,46 +23,18 @@ const inputMediaPadrao = document.getElementById('mediaDeAprovacao')
             }
             
         })  
-    }
-    
-function isOnList(object, value){
-    if (object.indexOf(firstUpperCase(value)) != -1){
-        return true
-    } else{
-        return false
-    }
-}
-
-function hasLength(input){
-    if(input.length <= 1){
-        window.alert('Por favor, digite um valor com 2 ou mais caracteres')
-        return true
-    }
-}
-
-function firstUpperCase(input){
-    return (input[0].toUpperCase() + (input.slice(1).toLowerCase()))
-}
-
-function isANumber(input){
-    if (isNaN(input)){
-        return false
-    } else{
-        return true
-    }
 }
 
 function inserirAluno(){
-    const alunoAtual = inputInsertAluno.value
-    
+    const alunoAtual = inputInsertAluno.value 
     if (isOnList(Turma.alunosturma, alunoAtual)){
         console.log('Aluno ja esta na Lista!')
         inputInsertAluno.value = ''
         inputInsertAluno.focus()
-    } else if(hasLength(inputInsertAluno.value)){
+    } else if(!hasLength(inputInsertAluno.value)){
+        window.alert('Por favor, digite um valor com 2 ou mais caracteres')
         inputInsertAluno.blur()
         inputInsertAluno.value = ''
-        console.log(alunoAtual.length)
     } else if (isANumber(inputInsertAluno.value)){
         alert('Por favor, insira um nome válido')
         inputInsertAluno.value = ''
@@ -72,14 +46,18 @@ function inserirAluno(){
         inputInsertAluno.value = ''
         inputInsertAluno.focus()
     }
-    }
+}
 
     
 function inserirTurma() {
     const turmaAtual = (inputTurma.value)
-    Turma.nometurma = turmaAtual
-    inputTurma.value = ''
-    inputInsertAluno.focus()
-    console.log(Turma)
-} 
-//test(26/08/2022)
+    if(hasLength(turmaAtual)){
+        Turma.nometurma = turmaAtual
+        inputTurma.value = ''
+        inputInsertAluno.focus()
+        console.log(Turma)
+    } else{
+        inputTurma.value = ''
+        return alert('Insira uma turma válida!')
+    }
+}
