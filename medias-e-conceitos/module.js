@@ -7,7 +7,7 @@ function firstUpperCase(input){
 }
 
 function hasLength(input){
-    if(input.length <= 1){
+    if(input.length < 1){
         return false
     } else {
         return true

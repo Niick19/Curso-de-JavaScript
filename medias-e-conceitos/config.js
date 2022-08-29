@@ -4,25 +4,20 @@ const inputInsertAluno = document.getElementById('inserirAluno')
 const inputMediaDeAprovacao = document.getElementById('mediaDeAprovacao')
 const inputNomeDoConceito = document.getElementById('nomeDoConceito')
 const inputValorConceito = document.getElementById('valorConceito')
+const selectAluno = document.getElementById('listaDeAlunos')
+const selectConceito = document.getElementById('tabelaConceitos')
+
 export const Turma = {
     nometurma:301,
     alunosturma:[]
 }
+
 export const Conceitos = {
-    mediaaprovacao: 6,
-    definirMediaAprovacao(){
-        const mediaDeAprovacao = inputMediaDeAprovacao.value
-        Conceitos.mediaaprovacao = Number(mediaDeAprovacao)
-        console.log(Conceitos)
-    },
-    criarNovoConceito(){
-        const nomeDoConceito = inputNomeDoConceito.value
-        const valorConceito = inputValorConceito.value
-        Conceitos.nomedoconceito = nomeDoConceito
-        Conceitos.valorconceito = Number(valorConceito)
-        console.log(Conceitos)
-    }
+    nomeconceito: [],
+    valorconceito: []
 }
+export let media
+
 window.onload = insertIntoInputs()
 
 function insertIntoInputs() {
@@ -34,18 +29,30 @@ function insertIntoInputs() {
                 if (inputInsertAluno.matches(':focus')){
                     inserirAluno()
                 }
-                if (inputTurma.matches(':focus')){
+                else if (inputTurma.matches(':focus')){
                     inserirTurma()
+                }
+                else if (inputMediaDeAprovacao.matches(':focus')){
+                    definirMediaAprovacao()
+                    inputNomeDoConceito.focus()
+                }
+                else if (inputNomeDoConceito.matches(':focus')){
+                    inputValorConceito.focus()
+                }
+                else if (inputValorConceito.matches(':focus')){
+                    inserirConceito()
+                    inputNomeDoConceito.focus()
                 }
             }
             
         })  
 }
+
 function clickedButtons(){
     document.getElementById('insTurma').addEventListener("click",inserirTurma)
     document.getElementById('insAluno').addEventListener("click", inserirAluno)
-    document.getElementById('defMedia').addEventListener("click", Conceitos.definirMediaAprovacao)
-    document.getElementById('insConceito').addEventListener("click", Conceitos.criarNovoConceito)
+    document.getElementById('defMedia').addEventListener("click", definirMediaAprovacao)
+    document.getElementById('insConceito').addEventListener("click", inserirConceito)
 }
 
 function inserirAluno(){
@@ -55,7 +62,7 @@ function inserirAluno(){
         inputInsertAluno.value = ''
         inputInsertAluno.focus()
     } else if(!hasLength(inputInsertAluno.value)){
-        window.alert('Por favor, digite um valor com 2 ou mais caracteres')
+        window.alert('Por favor, digite um valor com um ou mais caracteres')
         inputInsertAluno.blur()
         inputInsertAluno.value = ''
         inputInsertAluno.focus()
@@ -71,7 +78,6 @@ function inserirAluno(){
         inputInsertAluno.focus()
     }
 }
-
     
 function inserirTurma() {
     const turmaAtual = (inputTurma.value)
@@ -84,4 +90,29 @@ function inserirTurma() {
         inputTurma.value = ''
         return alert('Insira uma turma válida!')
     }
+}
+
+function definirMediaAprovacao(){
+    media = 6
+    const mediaDeAprovacao = Number(inputMediaDeAprovacao.value)
+    if (hasLength(inputMediaDeAprovacao.value)){
+    media = mediaDeAprovacao
+    console.log(media)
+    } else {
+    console.log(media)
+    }
+    inputMediaDeAprovacao.value = ''
+    
+}
+
+function inserirConceito(){
+    const conceito = inputNomeDoConceito.value
+    const valorConceito = Number(inputValorConceito.value)
+    //console.log(conceito, valorConceito)
+    Conceitos.nomeconceito.push(conceito)
+    Conceitos.valorconceito.push(valorConceito)
+    inputNomeDoConceito.value = ''
+    inputValorConceito.value = ''
+    inputValorConceito.blur()
+    console.log(Conceitos)
 }
