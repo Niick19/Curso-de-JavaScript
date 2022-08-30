@@ -10,21 +10,25 @@ const inputNomeDoConceito = document.getElementById('nomeDoConceito')
 const inputValorConceito = document.getElementById('valorConceito')
 const selectAluno = document.getElementById('listaDeAlunos')
 const selectConceito = document.getElementById('tabelaConceitos')
+const storeAll = document.getElementById('storeAll')
 let alunoSelecionado
 let indexAlunoSelecionado
 let isAlunoSelected = false
 let conceitoSelecionado
 let indexConceitoSelecionado
 let isConceitoSelected = false
-export const Turma = {
+const Turma = {
     nometurma:301,
     alunosturma:[]
 }
-export const Conceitos = {
+const Conceitos = {
     nomeconceito: [],
     valorconceito: []
 }
-export let media
+let media = {
+    media: null
+}
+
 
 window.onload = initialize()
 function initialize() {
@@ -73,6 +77,7 @@ function initialize() {
         document.getElementById('insConceito').addEventListener("click", inserirConceito)
         document.getElementById('rmAluno').addEventListener("click", removeSelectedAluno)
         document.getElementById('rmConceito').addEventListener("click", removeSelectedConceito)
+        document.getElementById('storeAll').addEventListener("click", storeJson)
     }
     
     function selectListener(){
@@ -154,10 +159,10 @@ function removeSelectedAluno(){
 }
 
 function definirMediaAprovacao(){
-    media = 6
+    media.media = 6
     const mediaDeAprovacao = Number(inputMediaDeAprovacao.value)
     if (hasLength(inputMediaDeAprovacao.value)){
-    media = mediaDeAprovacao
+    media.media = mediaDeAprovacao
     console.log(media)
     } else {
     console.log(media)
@@ -199,6 +204,24 @@ function removeSelectedConceito(){
     selectConceito.size = (Conceitos.nomeconceito.length) + 1
     inputNomeDoConceito.focus()
 }
+
+function storeJson(){
+    const jsonTurma = JSON.stringify(Turma)
+    const jsonConceitos = JSON.stringify(Conceitos)
+    const jsonMedia = JSON.stringify(media)
+    console.log(jsonTurma)
+    console.log(jsonConceitos)
+    console.log(jsonMedia)
+    
+    const jsonData = `[${jsonTurma}, ${jsonConceitos}, ${jsonMedia}]`
+    var storeJsonData = "data:text/json;charset=utf-8," + encodeURIComponent(jsonData);
+    var createDownload = document.getElementById('downloadAnchorElem');
+    createDownload.setAttribute("href",     storeJsonData     );
+    createDownload.setAttribute("download", "config.json");
+    createDownload.click(); 
+}
+
+
 
 
 
