@@ -211,5 +211,6 @@ You can use this code just for study or for improve it and make something useful
 DO NEVER use this for store real scholar sensitive information. If you wanna do this, do it for you own risk and just in your personal computer.
 NEVER expose this code on a server. If tou wanna do this, do the appropriate security improvements (several and extensive improvements).
 
+All these lines of code were write just for fun and to improve my knowledge
 Thanks for tou attention and follow me on https://github.com/nicolascoutochaves . If you have a suggestion, create a pull request or open a issue.
  */
