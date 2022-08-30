@@ -23,7 +23,7 @@ function isANumber(input){
 }
 
 function isOnList(object, value){
-    if (object.indexOf(firstUpperCase(value)) != -1){
+    if (object.indexOf(value) != -1){
         return true
     } else{
         return false
