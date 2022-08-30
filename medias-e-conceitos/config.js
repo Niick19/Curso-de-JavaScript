@@ -6,6 +6,9 @@ const inputNomeDoConceito = document.getElementById('nomeDoConceito')
 const inputValorConceito = document.getElementById('valorConceito')
 const selectAluno = document.getElementById('listaDeAlunos')
 const selectConceito = document.getElementById('tabelaConceitos')
+let alunoSelecionado
+let indexAlunoSelecionado
+let isAlunoSelected = false
 
 export const Turma = {
     nometurma:301,
@@ -21,6 +24,7 @@ export let media
 window.onload = insertIntoInputs()
 
 function insertIntoInputs() {
+    
     console.log('now listening the keyboard!')
     clickedButtons()
     window.addEventListener('keyup', event => {
@@ -44,8 +48,13 @@ function insertIntoInputs() {
                     inputNomeDoConceito.focus()
                 }
             }
-            
-        })  
+        if (event.code === 'Delete'){
+            if(isAlunoSelected){
+                removeSelectedAluno()
+            }
+        }
+        })
+        
 }
 
 function clickedButtons(){
@@ -53,6 +62,32 @@ function clickedButtons(){
     document.getElementById('insAluno').addEventListener("click", inserirAluno)
     document.getElementById('defMedia').addEventListener("click", definirMediaAprovacao)
     document.getElementById('insConceito').addEventListener("click", inserirConceito)
+    document.getElementById('rmAluno').addEventListener("click", removeSelectedAluno)
+}
+
+function insertSelectAluno(){
+    let optionAluno = document.createElement('option')
+    let ultimoAdicionado = Turma.alunosturma[(Turma.alunosturma.length)-1]
+    optionAluno.value = `aluno${ultimoAdicionado}`
+    optionAluno.text = ultimoAdicionado
+    selectAluno.appendChild(optionAluno)
+    selectAluno.size = (Turma.alunosturma.length) + 1
+}
+
+selectAluno.addEventListener("change", function(){
+    isAlunoSelected = true
+    alunoSelecionado = this.selectedOptions[0].text
+    indexAlunoSelecionado = Turma.alunosturma.indexOf(alunoSelecionado)
+   console.log(alunoSelecionado)
+   console.log(indexAlunoSelecionado)
+})
+
+function removeSelectedAluno(){
+    Turma.alunosturma.splice(indexAlunoSelecionado, 1)
+    console.log(Turma.alunosturma)
+    selectAluno.remove(indexAlunoSelecionado)
+    selectAluno.size = (Turma.alunosturma.length) + 1
+    inputInsertAluno.focus()
 }
 
 function inserirAluno(){
@@ -72,10 +107,13 @@ function inserirAluno(){
         inputInsertAluno.focus()
     }
     else{
+        if(Turma.alunosturma.length == 0){selectAluno.innerHTML = ''}
         Turma.alunosturma.push(firstUpperCase(alunoAtual))
+        insertSelectAluno()
         console.log(Turma.alunosturma)
         inputInsertAluno.value = ''
         inputInsertAluno.focus()
+        
     }
 }
     
