@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex04</title>
+    <style>
+        body {background-color: rgb(44, 43, 43);
+            color: white;
+            font: normal 20 pt Arial ;/*Isso é um comentário em CSS (parecido com JavaScript, porém não funciona a "//")*/
+        }
+        h1 {
+            color: rgb(229, 253, 8);
+            font: normal 25 pt Arial;
+        }
+
+        p {
+            color: rgb(61, 247, 15);
+            font: normal 20 pt Arial;
+        }
+        
+    </style>
+</head>
+
+<body>
+   <h1> Hello World!</h1> <!--Isso é um comentário em HTML --> 
+   <script>
+       var n1 = Number.parseFloat(window.prompt("Digite um número:")) //Pode usar só "Number" e deixar o JS se virar
+       var n2 = Number.parseFloat(window.prompt("digite outro número:"))//Converter de número para String é só usar o comando: String(n) ou n.toString(), onde n é o que você quer converter
+       var soma = n1 + n2
+       document.writeln(`O resultado da soma é <strong>${soma}</strong> <br/>`)
+       document.writeln("Valeu pela atenção!<br/><br/>")
+       document.write(`Essa soma lhe custou: <strong>${(soma * 0.013).toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})}</strong><br/><br/>`)       
+  </script>
+<p><strong>Esse HTML é louco mesmo KKKKK</strong></p>
+</body></html>

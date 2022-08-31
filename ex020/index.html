@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador automático</title>
+    <link rel="stylesheet" href="../estilos-exercicios/style.css">
+</head>
+<style>
+    input{
+        display: block;
+        margin-bottom: 20px;
+    }
+    p{
+        text-indent: 0px;
+        margin-bottom: 5px;
+        margin-top: 15px;
+    }
+    strong{
+        margin: 0px;
+    }
+</style>
+<body>
+    <h1>Contador automático</h1>   
+    <section>
+        <h2>Insira os dados abaixo e clique em verificar</h2>
+        <p><strong>Número inicial</strong></p>
+        <input type="number" name="NumInicial" id="NumInicial">
+        <p><strong>Número final</strong></p>
+        <input type="number" name="NumFinal" id="NumFinal">
+        <p><strong>Regra de progressão</strong> <br>(insira aqui como a contagem será feita: de "1 em 1", "2 em 2") </p>
+        <input type="number" name="Regra" id="Regra">
+
+        <input class="buttonGG" type="button" value="Contar" onclick="contar()">
+
+        <input class="buttonGG" type="button" value="Limpar" onclick="limpar()">
+        <div id="resultado">
+
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
