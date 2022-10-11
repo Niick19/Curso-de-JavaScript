@@ -1,4 +1,4 @@
-//Calculadora de logaritmos
+//Calculadora de logaritmos (NOT WORKING YET)
 
 let primos = []
 let numerommc = 100
